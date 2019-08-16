@@ -14,7 +14,7 @@ public class ProductOverviewPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='container']/div/div[3]/div[2]/div[1]/div[2]/div[2]/div/div[1]/h1/span")
 	WebElement prodcutName;
-	
+
 	@FindBy(xpath = "//*[@id='container']/div/div[3]/div[2]/div[1]/div[1]/div[2]/div/ul/li[1]/button")
 	WebElement addToCartBtn;
 
@@ -43,8 +43,10 @@ public class ProductOverviewPage extends TestBase {
 
 	public ViewCartPage addcart() {
 		log("clicking add to cart button");
+		String getofferPrice = getofferPrice();
+		String getoriginalPrice = getoriginalPrice();
 		addToCartBtn.click();
-		return new ViewCartPage();
+		return new ViewCartPage(getofferPrice, getoriginalPrice);
 	}
 
 	public void log(String data) {

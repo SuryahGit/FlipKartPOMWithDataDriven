@@ -71,7 +71,8 @@ public class SearchResultPage extends TestBase {
 		HashMap<String, String> map = printProductName(productName);
 		String offerPrice = map.get("OfferPrice");
 		String originalPrice = map.get("OriginalPrice");
-		new ExplicitWait().waitForWebElementToVisible(new ProductOverviewPage().prodcutName, explicitWait);
+	//	new ExplicitWait().waitForElementToClickable(new ProductOverviewPage().addToCartBtn, explicitWait);
+		switchToWindow(2);
 		String productPageOfferPrice = new ProductOverviewPage().getofferPrice();
 		String productPageOriginalPrice = new ProductOverviewPage().getoriginalPrice();
 		log("Verifiying Search result page Product Offer price " + offerPrice + " with product overview Offer price "
