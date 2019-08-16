@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Search Result Page Verification">
+	<listeners>
+		<listener
+			class-name="com.flipkart.qa.listener.ExtentListner"></listener>
+		<listener
+			class-name="com.flipkart.qa.listener.RetryListners"></listener>
+	</listeners>
+	<test name="Adding Single Project To Cart Test">
+		<classes>
+			<class
+				name="com.flipkart.qa.testcases.productCategoryPage.AddingSingleProjectToCartTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

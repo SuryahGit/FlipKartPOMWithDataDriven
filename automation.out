@@ -1,0 +1,31 @@
+2019-08-16 16:12:46 INFO  TestBase:112 - Opening the browser chrome
+2019-08-16 16:12:51 INFO  ExplicitWait:61 - ImplicitWait has been set to :5
+2019-08-16 16:12:51 INFO  TestBase:126 - Navigating to url
+2019-08-16 16:12:53 INFO  TestBase:160 - Excel Location C:\Users\HousingMan\eclipse-workspace\FlipkartPomDD/src/main/resources/configfile/testData.xlsx
+2019-08-16 16:12:54 INFO  TestBase:75 - **************loginTestWithValidInput Started***************
+2019-08-16 16:12:54 INFO  HomePage:137 - Login into application
+2019-08-16 16:12:54 INFO  HomePage:137 - Entering Email Id 0r Mobile Number floret.classifiedads5@gmail.com
+2019-08-16 16:12:54 INFO  HomePage:137 - Entering Password 70307134506
+2019-08-16 16:12:54 INFO  HomePage:137 - clicked 70307134506
+2019-08-16 16:12:55 INFO  ExplicitWait:23 - waiting for :suryah for :10 seconds
+2019-08-16 16:12:55 INFO  ExplicitWait:26 - element is visible now
+2019-08-16 16:12:55 INFO  SeleniumUtils:15 - element is displayed suryah
+2019-08-16 16:12:55 INFO  HomePage:137 - Logout Successfully
+2019-08-16 16:12:56 INFO  ExplicitWait:23 - waiting for :? for :10 seconds
+2019-08-16 16:12:56 INFO  ExplicitWait:26 - element is visible now
+2019-08-16 16:12:57 INFO  TestBase:75 - **************loginTestWithValidInput Started***************
+2019-08-16 16:12:57 INFO  HomePage:137 - Login into application
+2019-08-16 16:12:57 INFO  HomePage:137 - Entering Email Id 0r Mobile Number floret.classifiedads5@gmail.com
+2019-08-16 16:12:57 INFO  HomePage:137 - Entering Password 70307134506
+2019-08-16 16:12:57 INFO  HomePage:137 - clicked 70307134506
+2019-08-16 16:12:58 INFO  ExplicitWait:23 - waiting for :suryah for :10 seconds
+2019-08-16 16:12:58 INFO  ExplicitWait:26 - element is visible now
+2019-08-16 16:12:58 INFO  SeleniumUtils:15 - element is displayed suryah
+2019-08-16 16:12:58 INFO  HomePage:137 - Logout Successfully
+2019-08-16 16:12:59 INFO  ExplicitWait:23 - waiting for :? for :10 seconds
+2019-08-16 16:12:59 INFO  ExplicitWait:26 - element is visible now
+2019-08-16 16:12:59 INFO  TestBase:75 - **************loginTestWithValidInput Started***************
+2019-08-16 16:12:59 INFO  HomePage:137 - Login into application
+2019-08-16 16:12:59 INFO  HomePage:137 - Entering Email Id 0r Mobile Number 8553610403
+2019-08-16 16:12:59 INFO  HomePage:137 - Entering Password f17890k
+2019-08-16 16:12:59 INFO  HomePage:137 - clicked f17890k

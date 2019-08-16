@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Verifying HomePage Login Test">
+	<listeners>
+		<listener
+			class-name="com.flipkart.qa.listener.ExtentListner"></listener>
+		<listener
+			class-name="com.flipkart.qa.listener.RetryListners"></listener>
+	</listeners>
+	<test name="Verify Login With Valid Credentials">
+		<classes>
+			<class
+				name="com.flipkart.qa.testcases.homepage.LoginTestValidInput" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
