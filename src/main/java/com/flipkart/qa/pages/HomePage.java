@@ -24,16 +24,19 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//*[@id='container']/div/div[1]/div[1]/div[2]/div[3]/div/a")
 	WebElement loginAndSignup;
 
-	@FindBy(xpath = "//div/form/div/input[@type='text']")
+	/*@FindBy(xpath = "//div/form/div/input[@type='text']")
+	WebElement logineMailOrMobileNumber;*/
+	
+	@FindBy(css = "form>div>input[type='text']")
 	WebElement logineMailOrMobileNumber;
 
-	@FindBy(xpath = "//div/form/div[2]/input[@type='password']")
+	@FindBy(xpath = "//input[@type='password']")
 	WebElement loginPassword;
 
-	@FindBy(xpath = "//div/form/div[3]/button[@type='submit']")
+	@FindBy(css = "button[type='submit']>span")
 	WebElement loginBtn;
 
-	@FindBy(xpath = "/html/body/div[2]/div/div/button")
+	@FindBy(xpath = "//button[contains(text(),'✕')]")
 	WebElement LoginPopUpcloseBtn;
 
 	@FindBy(xpath = "//*[@id='container']/div/div[1]/div[1]/div[2]/div[3]/div/div/div/div")

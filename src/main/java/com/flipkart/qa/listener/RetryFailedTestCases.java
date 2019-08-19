@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 public class RetryFailedTestCases {
 
 	private int retrycount = 0;
-	private int maxRetryLimit = 2;
+	private int maxRetryLimit = 3;
 	private Logger log = Logger.getLogger(RetryFailedTestCases.class);
 
 	public boolean retry(ITestResult result) {

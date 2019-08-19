@@ -51,11 +51,9 @@ public class TestBase {
 			fip = new FileInputStream(
 					System.getProperty("user.dir") + "\\src\\main\\java\\com\\flipkart\\qa\\config\\config.properties");
 			prop.load(fip);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		} catch (Exception e) {
+			e.getMessage();
+		} 
 	}
 
 	@BeforeSuite
@@ -91,6 +89,7 @@ public class TestBase {
 			// String imagePath = captureScreenShot(result.getName(), driver);
 			// test.addScreenCaptureFromPath(imagePath);
 		}
+		
 		extentReport.flush();
 	}
 

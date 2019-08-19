@@ -27,8 +27,6 @@ public class SearchResultPage extends TestBase {
 	@FindBy(xpath = "//*[@class='col col-7-12']/div[1]")
 	List<WebElement> productList;
 
-	// *[@id="container"]/div/div[3]/div[2]/div[1]/div[2]/div[25]/div/div/div/a/div[3]/div[2]/div[1]/div/div[2]
-	// *[@id="container"]/div/div[3]/div[2]/div[1]/div[2]/div[2]/div/div/div/a/div[3]/div[2]/div[1]/div/div[2]
 	public SearchResultPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -71,7 +69,8 @@ public class SearchResultPage extends TestBase {
 		HashMap<String, String> map = printProductName(productName);
 		String offerPrice = map.get("OfferPrice");
 		String originalPrice = map.get("OriginalPrice");
-	//	new ExplicitWait().waitForElementToClickable(new ProductOverviewPage().addToCartBtn, explicitWait);
+		// new ExplicitWait().waitForElementToClickable(new
+		// ProductOverviewPage().addToCartBtn, explicitWait);
 		switchToWindow(2);
 		String productPageOfferPrice = new ProductOverviewPage().getofferPrice();
 		String productPageOriginalPrice = new ProductOverviewPage().getoriginalPrice();
