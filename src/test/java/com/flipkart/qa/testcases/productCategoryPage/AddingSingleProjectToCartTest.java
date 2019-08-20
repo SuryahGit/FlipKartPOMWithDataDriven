@@ -2,7 +2,7 @@ package com.flipkart.qa.testcases.productCategoryPage;
 
 
 
-import org.testng.Assert;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

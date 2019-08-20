@@ -21,12 +21,9 @@ public class HomePage extends TestBase {
 
 	private static final Logger log = Logger.getLogger(HomePage.class.getName());
 	
-	@FindBy(xpath = "//*[@id='container']/div/div[1]/div[1]/div[2]/div[3]/div/a")
+	@FindBy(xpath = "//a[contains(text(),'Login & Signup')]")
 	WebElement loginAndSignup;
 
-	/*@FindBy(xpath = "//div/form/div/input[@type='text']")
-	WebElement logineMailOrMobileNumber;*/
-	
 	@FindBy(css = "form>div>input[type='text']")
 	WebElement logineMailOrMobileNumber;
 
@@ -45,15 +42,16 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//a/div[contains(text(),'Logout')]")
 	WebElement logOut;
 
-	@FindBy(xpath = "//*[@id='block_top_menu']/ul/li[1]/a")
-	public WebElement grocery;
+	/*@FindBy(xpath = "//*[@id='block_top_menu']/ul/li[1]/a")
+	public WebElement grocery;*/
 
-	@FindBy(xpath = "//div[@class='zi6sUf']/div/ul/li")
+	@FindBy(css = "div>:nth-child(2)>div>ul>li")
 	List<WebElement> mainMenu;
 
 	String subMainMenuPar1 = "//*[@id='container']/div/div[2]/div/ul/li[";
 	String subMainMenuPar2 = "]/ul/li/ul/li/ul/li/a";
-
+	//*[@id="container"]/div/div[2]/div/ul/li[1]/ul/li/ul/li[1]/ul/li[2]/a
+	//*[@id='container']/div/div[2]/div/ul/li[2]/ul/li/ul/li/ul/li/a
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
