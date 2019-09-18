@@ -10,7 +10,7 @@ import com.flipkart.qa.pages.SearchResultPage;
 import com.flipkart.qa.pages.ViewCartPage;
 import com.flipkart.qa.util.SeleniumUtils;
 
-public class AddingSingleProjectToCartTest extends TestBase {
+public class AddingMultipleProjectToCartTest extends TestBase {
 
 	HomePage homepage;
 	SearchResultPage searchResultPage;
@@ -19,6 +19,9 @@ public class AddingSingleProjectToCartTest extends TestBase {
 	String mainMenuText = "Electronics";
 	String subMainMenuText = "Mi";
 	String productName = "Redmi Note 7 Pro (Space Black, 64 GB)";
+	String mainMenuText1 = "Men";
+	String subMainMenuText1 = "Sports Shoes";
+	String productName1 = "WNDR-13 Running Shoes For Men";
 
 	@BeforeClass
 	public void setup() {
@@ -30,10 +33,19 @@ public class AddingSingleProjectToCartTest extends TestBase {
 	}
 
 	@Test
-	public void addingSingleProjectToCartTest() throws InterruptedException {
+	public void addingMultipleProjectToCartTest() throws InterruptedException {
 		homepage.selectSubMainMenu(mainMenuText, subMainMenuText);
 		searchResultPage.verifySearchResultandProjOverviewPricesSame(productName);
-//		productOverviewPage.getofferPrice();
+		viewCartPage = productOverviewPage.addcart();
+		viewCartPage.verifyProjOverviwandViewCarePricesSame();
+		viewCartPage.verifyProductItemCounts();
+		viewCartPage.veryBothSideTotalProductPrice();
+		viewCartPage.verySavingPrice();
+		driver.close();
+		new SeleniumUtils().switchToWindow(1);
+		homepage.homePageLogoClick();
+		homepage.selectSubMainMenu(mainMenuText1, subMainMenuText1);
+		searchResultPage.verifySearchResultandProjOverviewPricesSame(productName1);
 		viewCartPage = productOverviewPage.addcart();
 		viewCartPage.verifyProjOverviwandViewCarePricesSame();
 		viewCartPage.verifyProductItemCounts();
@@ -41,5 +53,4 @@ public class AddingSingleProjectToCartTest extends TestBase {
 		viewCartPage.verySavingPrice();
 		viewCartPage.clickPlaceOrderBtn();
 	}
-
 }

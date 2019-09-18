@@ -2,7 +2,6 @@ package com.flipkart.qa.base;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
@@ -53,7 +52,7 @@ public class TestBase {
 			prop.load(fip);
 		} catch (Exception e) {
 			e.getMessage();
-		} 
+		}
 	}
 
 	@BeforeSuite
@@ -89,7 +88,7 @@ public class TestBase {
 			// String imagePath = captureScreenShot(result.getName(), driver);
 			// test.addScreenCaptureFromPath(imagePath);
 		}
-		
+
 		extentReport.flush();
 	}
 

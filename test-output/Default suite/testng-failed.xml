@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.flipkart.qa.testcases.homepage.LoginTestValidInput">
+      <class name="com.flipkart.qa.testcases.productCategoryPage.AddingMultipleProjectToCartTest">
         <methods>
-          <include name="loginTestWithValidInput" invocation-numbers="2"/>
           <include name="beforeTest"/>
-          <include name="setup"/>
           <include name="beforeMethod"/>
+          <include name="setup"/>
           <include name="beforeSuite"/>
           <include name="afterTest"/>
+          <include name="addingMultipleProjectToCartTest"/>
           <include name="afterMthod"/>
         </methods>
-      </class> <!-- com.flipkart.qa.testcases.homepage.LoginTestValidInput -->
+      </class> <!-- com.flipkart.qa.testcases.productCategoryPage.AddingMultipleProjectToCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

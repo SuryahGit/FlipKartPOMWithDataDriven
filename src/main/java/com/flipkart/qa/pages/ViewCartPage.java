@@ -3,7 +3,6 @@ package com.flipkart.qa.pages;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -28,7 +27,7 @@ public class ViewCartPage extends TestBase {
 	@FindBy(xpath = "//*[@id='container']/div/div[2]/div[2]/div/div[1]/div/div[2]/div/div[1]/div[1]/span[2]")
 	WebElement originalPrice;
 
-	@FindBy(xpath = "//*[@id='container']/div/div[2]/div[2]/div/div[1]/div/div[3]/div/form/button")
+	@FindBy(xpath = "//span[contains(text(),'Place Order')]")
 	WebElement placeOrderBtn;
 
 	@FindBy(xpath = "//*[contains(text(), 'Price (')]")
@@ -42,6 +41,9 @@ public class ViewCartPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='container']/div/div[2]/div[2]/div/div[2]/div[1]/div/div/div[1]/div[3]/div/span")
 	WebElement totalPayablePrice;
+
+	@FindBy(xpath = "//*[@id='container']/div/div[2]/div[2]/div/div[2]/div[1]/div/div/div[1]/div[2]/span")
+	WebElement deliveryPrice;
 
 	@FindBy(xpath = "//*[@id='container']/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[1]/div[1]/a")
 	List<WebElement> myCartTotalProrducts;
@@ -57,19 +59,32 @@ public class ViewCartPage extends TestBase {
 		this();
 		productPageOfferPrice = OfferPrice;
 		productPageOriginalPrice = OriginalPrice;
-		System.out.println(productPageOfferPrice + " constructor " + productPageOriginalPrice);
-		System.out.println(productPageOfferPrice + " constructor " + productPageOriginalPrice);
+		/*System.out.println(productPageOfferPrice + " constructor " + productPageOriginalPrice);
+		System.out.println(productPageOfferPrice + " constructor " + productPageOriginalPrice);*/
 	}
 
-	public String getofferPrice() {
+	public String[] getofferPrice() {
 		log("Getting View Cart Page Product Offer Price");
-		return offerPrice.getText().replace("₹", "");
+
+		int priceSize = offerPrices.size();
+		String[] price = new String[priceSize - 1];
+		for (int i = 1; i <= price.length; i++) {
+			price[i - 1] = offerPrices.get(i).getText().replaceAll("[^a-zA-Z0-9]", "");
+		//	System.out.println("My Cart Product Offer Price " + price[i - 1]);
+		}
+		return price;
 	}
 
-	public String getoriginalPrice() {
+	public String[] getoriginalPrice() {
 
 		log("Getting View Cart Page Product Original Price");
-		return originalPrice.getText().replace("₹", "");
+		int priceSize = originalPrices.size();
+		String[] price = new String[priceSize];
+		for (int i = 0; i < price.length; i++) {
+			price[i] = originalPrices.get(i).getText().replaceAll("[^a-zA-Z0-9]", "");
+			//System.out.println("My Cart Product Original Price " + price[i]);
+		}
+		return price;
 	}
 
 	public void clickPlaceOrderBtn() {
@@ -91,13 +106,28 @@ public class ViewCartPage extends TestBase {
 		int priceSize = offerPrices.size();
 
 		int getMyCartTotalPrice = 0;
-		for (int i = 0; i < priceSize - 1; i++) {
-			String price = driver.findElement(By.xpath("//*[@id='container']/div/div[2]/div[2]/div/div[1]/div/div["
-					+ (i + 2) + "]/div/div[1]/div[1]/span[1]")).getText().replaceAll("[^a-zA-Z0-9]", "");
+		for (int i = 1; i < priceSize; i++) {
+			String price = offerPrices.get(i).getText().replaceAll("[^a-zA-Z0-9]", "");
+		//	System.out.println("My Cart Product Offer Price " + price);
 			getMyCartTotalPrice = getMyCartTotalPrice + Integer.parseInt(price);
 		}
 
 		return getMyCartTotalPrice;
+	}
+
+	public int getdeliveryPrice() {
+
+		String dPrice = deliveryPrice.getText();
+		if (dPrice.equalsIgnoreCase("Free")) {
+			//System.out.println("Delivery Price is " + dPrice);
+			return 0;
+		} else {
+
+			int dPri = Integer.parseInt(dPrice.replace("₹", ""));
+			//System.out.println("Delivery Price is " + dPri);
+			return dPri;
+		}
+
 	}
 
 	public int gettotalPayablePrice() {
@@ -118,8 +148,8 @@ public class ViewCartPage extends TestBase {
 
 		int getMyCartTotalOrinalPrice = 0;
 		for (int i = 0; i < priceSize; i++) {
-			String price = driver.findElement(By.xpath("//*[@id='container']/div/div[2]/div[2]/div/div[1]/div/div["
-					+ (i + 2) + "]/div/div[1]/div[1]/span[2]")).getText().replaceAll("[^a-zA-Z0-9]", "");
+			String price = originalPrices.get(i).getText().replaceAll("[^a-zA-Z0-9]", "");
+			//System.out.println("My Cart Product Orinal Price " + price);
 			getMyCartTotalOrinalPrice = getMyCartTotalOrinalPrice + Integer.parseInt(price);
 		}
 
@@ -130,9 +160,10 @@ public class ViewCartPage extends TestBase {
 		log("Getting View Cart Page My Added Products Total Saving Price");
 		int getMyCartTotalofferPrice = getMyCartTotalOfferPrices();
 		int getMyCartTotalOrinalPrice = getMyCartTotalOriginalPrices();
+		int dPrice = getdeliveryPrice();
 		// System.out.println("Saving Price
 		// "+(getMyCartTotalOrinalPrice-getMyCartTotalofferPrice));
-		return getMyCartTotalOrinalPrice - getMyCartTotalofferPrice;
+		return getMyCartTotalOrinalPrice - getMyCartTotalofferPrice - dPrice;
 	}
 
 	public int getYouWillSavePrice() {
@@ -147,34 +178,48 @@ public class ViewCartPage extends TestBase {
 	public void verifyProjOverviwandViewCarePricesSame() throws InterruptedException {
 
 		new ExplicitWait().waitForWebElementToVisible(placeOrderBtn, explicitWait);
-		String cartPageOfferPrice = getofferPrice();
-		String cartPageOriginalPrice = getoriginalPrice();
-		System.out.println(productPageOfferPrice + " Test " + cartPageOriginalPrice);
-		log("Verifiying Product overview page Offer price " + productPageOfferPrice + " with ViewCart Page Offer price "
-				+ cartPageOfferPrice);
-		Assert.assertEquals(cartPageOfferPrice, productPageOfferPrice);
-		log("Verifiying Product overview page Product Original price " + productPageOriginalPrice
-				+ " with ViewCart Page Offer price " + cartPageOriginalPrice);
-		Assert.assertEquals(cartPageOriginalPrice, productPageOriginalPrice);
+		String[] cartPageOfferPrice = getofferPrice();
+		String[] cartPageOriginalPrice = getoriginalPrice();
+		for (int i = 0; i < cartPageOfferPrice.length; i++) {
+			String cartpageOfferPrice = cartPageOfferPrice[i];
+			if (cartpageOfferPrice.equalsIgnoreCase(productPageOfferPrice)) {
+			//	System.out.println(productPageOfferPrice + " Test " + cartpageOfferPrice);
+				log("Verifiying Product overview page Offer price " + productPageOfferPrice
+						+ " with ViewCart Page Offer price " + cartpageOfferPrice);
+				Assert.assertEquals(cartpageOfferPrice, productPageOfferPrice);
+				break;
+			}
+		}
+		for (int i = 0; i < cartPageOfferPrice.length; i++) {
+			String cartpageOriginalPrice = cartPageOriginalPrice[i];
+			if (cartpageOriginalPrice.equalsIgnoreCase(productPageOriginalPrice)) {
+	//			System.out.println(productPageOriginalPrice + " Test " + cartpageOriginalPrice);
+				log("Verifiying Product overview page Original price " + productPageOriginalPrice
+						+ " with ViewCart Page Original price " + cartpageOriginalPrice);
+				Assert.assertEquals(cartpageOriginalPrice, productPageOriginalPrice);
+				break;
+			}
+		}
 	}
 
 	public void verifyProductItemCounts() {
 		int totalItems = getTotalItems();
 		int myCartTotalProrducts = getMyCartTotalProducts();
 		log("Verifiying view page added My cart Total product count " + myCartTotalProrducts
-				+ " with PRICE DETAILS totalIems count " + totalItems);
+				+ " with PRICE DETAILS total Items count " + totalItems);
 		Assert.assertEquals(myCartTotalProrducts, totalItems);
 	}
-	
-	public void veryBothSideTotalProductPrice()
-	{
+
+	public void veryBothSideTotalProductPrice() {
 		int myCartTotalPrice = getMyCartTotalOfferPrices();
 		int totalPayablePrice = gettotalPayablePrice();
-		log("Verifiying view page added My Cart Total Price " + myCartTotalPrice
+		int delPrice = getdeliveryPrice();
+		//System.out.println("MY Cart Total Price Includes Delivery " + (myCartTotalPrice + delPrice));
+		log("Verifiying view page added My Cart Total Price " + (myCartTotalPrice + delPrice)
 				+ " with My Cart Total Payable Price " + totalPayablePrice);
-		Assert.assertEquals(myCartTotalPrice, totalPayablePrice);
+		Assert.assertEquals((myCartTotalPrice + delPrice), totalPayablePrice);
 	}
-	
+
 	public void verySavingPrice() {
 		int mycartSavePrice = getMyCartSavingPrice();
 		int youWillSavePrice = getYouWillSavePrice();
@@ -189,5 +234,4 @@ public class ViewCartPage extends TestBase {
 		TestBase.logExtentReport(data);
 	}
 
-	
 }

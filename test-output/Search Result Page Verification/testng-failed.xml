@@ -5,19 +5,19 @@
     <listener class-name="com.flipkart.qa.listener.ExtentListner"/>
     <listener class-name="com.flipkart.qa.listener.RetryListners"/>
   </listeners>
-  <test thread-count="5" name="Adding Single Project To Cart Test(failed)">
+  <test thread-count="5" name="Adding Multiple Project To Cart Test(failed)">
     <classes>
-      <class name="com.flipkart.qa.testcases.productCategoryPage.AddingSingleProjectToCartTest">
+      <class name="com.flipkart.qa.testcases.productCategoryPage.AddingMultipleProjectToCartTest">
         <methods>
           <include name="beforeTest"/>
-          <include name="addingSingleProjectToCartTest"/>
           <include name="beforeMethod"/>
+          <include name="setup"/>
           <include name="beforeSuite"/>
           <include name="afterTest"/>
-          <include name="setup"/>
+          <include name="addingMultipleProjectToCartTest"/>
           <include name="afterMthod"/>
         </methods>
-      </class> <!-- com.flipkart.qa.testcases.productCategoryPage.AddingSingleProjectToCartTest -->
+      </class> <!-- com.flipkart.qa.testcases.productCategoryPage.AddingMultipleProjectToCartTest -->
     </classes>
-  </test> <!-- Adding Single Project To Cart Test(failed) -->
+  </test> <!-- Adding Multiple Project To Cart Test(failed) -->
 </suite> <!-- Failed suite [Search Result Page Verification] -->
