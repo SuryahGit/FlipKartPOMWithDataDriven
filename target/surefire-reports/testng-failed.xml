@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Verifying HomePage Login Test]">
+  <listeners>
+    <listener class-name="com.flipkart.qa.listener.ExtentListner"/>
+    <listener class-name="com.flipkart.qa.listener.RetryListners"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Verify Login With Valid Credentials(failed)">
+    <classes>
+      <class name="com.flipkart.qa.testcases.homepage.LoginTestValidInput">
+        <methods>
+          <include name="loginTestWithValidInput" invocation-numbers="1"/>
+          <include name="beforeTest"/>
+          <include name="setup"/>
+          <include name="beforeMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterMthod"/>
+        </methods>
+      </class> <!-- com.flipkart.qa.testcases.homepage.LoginTestValidInput -->
+    </classes>
+  </test> <!-- Verify Login With Valid Credentials(failed) -->
+</suite> <!-- Failed suite [Verifying HomePage Login Test] -->
