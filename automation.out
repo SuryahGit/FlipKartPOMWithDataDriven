@@ -1,72 +1,72 @@
-2019-09-18 19:23:25 INFO  TestBase:110 - Opening the browser chrome
-2019-09-18 19:23:34 INFO  ExplicitWait:61 - ImplicitWait has been set to :5
-2019-09-18 19:23:34 INFO  TestBase:124 - Navigating to url
-2019-09-18 19:24:10 INFO  TestBase:72 - **************addingMultipleProjectToCartTest Started***************
-2019-09-18 19:24:10 INFO  ExtentListner:19 - addingMultipleProjectToCartTest is started successfully
-2019-09-18 19:24:10 INFO  SeleniumUtils:17 - element is displayed ?
-2019-09-18 19:24:10 INFO  HomePage:146 - Closing Login Popup
-2019-09-18 19:24:10 INFO  HomePage:146 - Mouse hovering to Main Menu Electronics
-2019-09-18 19:24:10 INFO  HomePage:146 - Mouse hovering to Sub Main Menu Mi
-2019-09-18 19:24:10 INFO  HomePage:146 - Cliked on the Sub Main Menu Mi
-2019-09-18 19:24:13 INFO  SearchResultPage:110 - Getting Search Result Page Product(Redmi Note 7 Pro (Space Black, 64 GB)) Offer Price
-2019-09-18 19:24:13 INFO  SearchResultPage:110 - Clicking Redmi Note 7 Pro (Space Black, 64 GB) from search results
-2019-09-18 19:24:13 INFO  SeleniumUtils:34 - switching to 2 window
-2019-09-18 19:24:13 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
-2019-09-18 19:24:17 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
-2019-09-18 19:24:17 INFO  SearchResultPage:110 - Verifiying Search result page Product Offer price 13,999 with product overview page Offer price 13,999
-2019-09-18 19:24:17 INFO  SearchResultPage:110 - Verifiying Search result page Product Original price 15,999 with product overview page Offer price 15,999
-2019-09-18 19:24:17 INFO  ProductOverviewPage:84 - clicking add to cart button
-2019-09-18 19:24:17 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
-2019-09-18 19:24:17 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
-2019-09-18 19:24:22 ERROR SeleniumUtils:22 - element is not displayed 
-2019-09-18 19:24:23 INFO  ExplicitWait:23 - waiting for :PLACE ORDER for :10 seconds
-2019-09-18 19:24:23 INFO  ExplicitWait:26 - element is visible now
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page Product Offer Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page Product Original Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting Total Items Text
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page My Total Products Size
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Verifiying view page added My cart Total product count 1 with PRICE DETAILS total Items count 1
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page Total Payable Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Verifiying view page added My Cart Total Price 13999 with My Cart Total Payable Price 13999
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Saving Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Orinal Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Getting View Cart Page You wil Save Price
-2019-09-18 19:24:23 INFO  ViewCartPage:232 - Verifiying view page added My Cart Save Price 2000 with PRICE DETAILS You Will Save Price 2000
-2019-09-18 19:24:23 INFO  SeleniumUtils:34 - switching to 1 window
-2019-09-18 19:24:28 ERROR SeleniumUtils:22 - element is not displayed 
-2019-09-18 19:24:28 INFO  HomePage:146 - Mouse hovering to Main Menu Men
-2019-09-18 19:24:29 INFO  HomePage:146 - Mouse hovering to Sub Main Menu Sports Shoes
-2019-09-18 19:24:29 INFO  HomePage:146 - Cliked on the Sub Main Menu Sports Shoes
-2019-09-18 19:24:37 INFO  SearchResultPage:110 - Getting Search Result Page Product(WNDR-13 Running Shoes For Men) Offer Price
-2019-09-18 19:24:37 INFO  SearchResultPage:110 - Clicking WNDR-13 Running Shoes For Men from search results
-2019-09-18 19:24:37 INFO  SeleniumUtils:34 - switching to 2 window
-2019-09-18 19:24:37 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
-2019-09-18 19:24:41 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
-2019-09-18 19:24:41 INFO  SearchResultPage:110 - Verifiying Search result page Product Offer price 474 with product overview page Offer price 474
-2019-09-18 19:24:41 INFO  SearchResultPage:110 - Verifiying Search result page Product Original price 599 with product overview page Offer price 599
-2019-09-18 19:24:41 INFO  ProductOverviewPage:84 - clicking add to cart button
-2019-09-18 19:24:41 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
-2019-09-18 19:24:41 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
-2019-09-18 19:24:41 INFO  SeleniumUtils:17 - element is displayed Size- UK/India
-2019-09-18 19:24:44 INFO  ExplicitWait:23 - waiting for :PLACE ORDER for :10 seconds
-2019-09-18 19:24:44 INFO  ExplicitWait:26 - element is visible now
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page Product Offer Price
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page Product Original Price
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Verifiying Product overview page Offer price 474 with ViewCart Page Offer price 474
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Verifiying Product overview page Original price 599 with ViewCart Page Original price 599
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting Total Items Text
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page My Total Products Size
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Verifiying view page added My cart Total product count 2 with PRICE DETAILS total Items count 2
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page Total Payable Price
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Verifiying view page added My Cart Total Price 14473 with My Cart Total Payable Price 14473
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Saving Price
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
-2019-09-18 19:24:44 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Orinal Price
-2019-09-18 19:24:45 INFO  ViewCartPage:232 - Getting View Cart Page You wil Save Price
-2019-09-18 19:24:45 INFO  ViewCartPage:232 - Verifiying view page added My Cart Save Price 2125 with PRICE DETAILS You Will Save Price 2125
-2019-09-18 19:24:45 INFO  ViewCartPage:232 - clicking place order button
-2019-09-18 19:25:08 INFO  ExtentListner:25 - addingMultipleProjectToCartTest test case is passed
-2019-09-18 19:25:09 INFO  ExtentListner:55 - Adding Multiple Project To Cart Test Class Finished..
+2019-09-19 14:23:24 INFO  TestBase:112 - Opening the browser chrome
+2019-09-19 14:23:34 INFO  ExplicitWait:61 - ImplicitWait has been set to :5
+2019-09-19 14:23:34 INFO  TestBase:126 - Navigating to url
+2019-09-19 14:23:36 INFO  TestBase:74 - **************addingMultipleProjectToCartTest Started***************
+2019-09-19 14:23:36 INFO  ExtentListner:19 - addingMultipleProjectToCartTest is started successfully
+2019-09-19 14:23:36 INFO  SeleniumUtils:17 - element is displayed ?
+2019-09-19 14:23:36 INFO  HomePage:146 - Closing Login Popup
+2019-09-19 14:23:36 INFO  HomePage:146 - Mouse hovering to Main Menu Electronics
+2019-09-19 14:23:36 INFO  HomePage:146 - Mouse hovering to Sub Main Menu Mi
+2019-09-19 14:23:37 INFO  HomePage:146 - Cliked on the Sub Main Menu Mi
+2019-09-19 14:23:40 INFO  SearchResultPage:110 - Getting Search Result Page Product(Redmi Note 7 Pro (Space Black, 64 GB)) Offer Price
+2019-09-19 14:23:40 INFO  SearchResultPage:110 - Clicking Redmi Note 7 Pro (Space Black, 64 GB) from search results
+2019-09-19 14:23:40 INFO  SeleniumUtils:34 - switching to 2 window
+2019-09-19 14:23:40 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
+2019-09-19 14:23:44 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
+2019-09-19 14:23:44 INFO  SearchResultPage:110 - Verifiying Search result page Product Offer price 13,999 with product overview page Offer price 13,999
+2019-09-19 14:23:44 INFO  SearchResultPage:110 - Verifiying Search result page Product Original price 15,999 with product overview page Offer price 15,999
+2019-09-19 14:23:44 INFO  ProductOverviewPage:84 - clicking add to cart button
+2019-09-19 14:23:44 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
+2019-09-19 14:23:44 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
+2019-09-19 14:23:49 ERROR SeleniumUtils:22 - element is not displayed 
+2019-09-19 14:23:49 INFO  ExplicitWait:23 - waiting for :PLACE ORDER for :30 seconds
+2019-09-19 14:23:49 INFO  ExplicitWait:26 - element is visible now
+2019-09-19 14:23:49 INFO  ViewCartPage:232 - Getting View Cart Page Product Offer Price
+2019-09-19 14:23:49 INFO  ViewCartPage:232 - Getting View Cart Page Product Original Price
+2019-09-19 14:23:49 INFO  ViewCartPage:232 - Getting Total Items Text
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Getting View Cart Page My Total Products Size
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Verifiying view page added My cart Total product count 1 with PRICE DETAILS total Items count 1
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Getting View Cart Page Total Payable Price
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Verifiying view page added My Cart Total Price 13999 with My Cart Total Payable Price 13999
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Saving Price
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Orinal Price
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Getting View Cart Page You wil Save Price
+2019-09-19 14:23:50 INFO  ViewCartPage:232 - Verifiying view page added My Cart Save Price 2000 with PRICE DETAILS You Will Save Price 2000
+2019-09-19 14:23:50 INFO  SeleniumUtils:34 - switching to 1 window
+2019-09-19 14:23:55 ERROR SeleniumUtils:22 - element is not displayed 
+2019-09-19 14:23:55 INFO  HomePage:146 - Mouse hovering to Main Menu Men
+2019-09-19 14:23:55 INFO  HomePage:146 - Mouse hovering to Sub Main Menu Sports Shoes
+2019-09-19 14:23:55 INFO  HomePage:146 - Cliked on the Sub Main Menu Sports Shoes
+2019-09-19 14:24:03 INFO  SearchResultPage:110 - Getting Search Result Page Product(Oxygen Running Shoes For Men) Offer Price
+2019-09-19 14:24:03 INFO  SearchResultPage:110 - Clicking Oxygen Running Shoes For Men from search results
+2019-09-19 14:24:03 INFO  SeleniumUtils:34 - switching to 2 window
+2019-09-19 14:24:03 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
+2019-09-19 14:24:07 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
+2019-09-19 14:24:07 INFO  SearchResultPage:110 - Verifiying Search result page Product Offer price 499 with product overview page Offer price 499
+2019-09-19 14:24:07 INFO  SearchResultPage:110 - Verifiying Search result page Product Original price 999 with product overview page Offer price 999
+2019-09-19 14:24:07 INFO  ProductOverviewPage:84 - clicking add to cart button
+2019-09-19 14:24:07 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Offer Price
+2019-09-19 14:24:07 INFO  ProductOverviewPage:84 - Getting Product Overview Page Product Original Price
+2019-09-19 14:24:07 INFO  SeleniumUtils:17 - element is displayed Size- UK/India
+2019-09-19 14:24:10 INFO  ExplicitWait:23 - waiting for :PLACE ORDER for :30 seconds
+2019-09-19 14:24:10 INFO  ExplicitWait:26 - element is visible now
+2019-09-19 14:24:10 INFO  ViewCartPage:232 - Getting View Cart Page Product Offer Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page Product Original Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Verifiying Product overview page Offer price 499 with ViewCart Page Offer price 499
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Verifiying Product overview page Original price 999 with ViewCart Page Original price 999
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting Total Items Text
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page My Total Products Size
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Verifiying view page added My cart Total product count 2 with PRICE DETAILS total Items count 2
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page Total Payable Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Verifiying view page added My Cart Total Price 14498 with My Cart Total Payable Price 14498
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Saving Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Offer Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page My Added Products Total Orinal Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Getting View Cart Page You wil Save Price
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - Verifiying view page added My Cart Save Price 2500 with PRICE DETAILS You Will Save Price 2500
+2019-09-19 14:24:11 INFO  ViewCartPage:232 - clicking place order button
+2019-09-19 14:24:12 INFO  ExtentListner:25 - addingMultipleProjectToCartTest test case is passed
+2019-09-19 14:24:12 INFO  ExtentListner:55 - Adding Multiple Project To Cart Test Class Finished..

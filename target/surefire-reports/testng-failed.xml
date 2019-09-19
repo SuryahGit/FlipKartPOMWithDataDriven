@@ -15,6 +15,7 @@
           <include name="beforeMethod"/>
           <include name="beforeSuite"/>
           <include name="afterTest"/>
+          <include name="afterSuite"/>
           <include name="afterMthod"/>
         </methods>
       </class> <!-- com.flipkart.qa.testcases.homepage.LoginTestValidInput -->

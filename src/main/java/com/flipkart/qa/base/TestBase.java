@@ -20,6 +20,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -31,6 +32,7 @@ import com.aventstack.extentreports.Status;
 import com.flipkart.qa.reports.ExtentReport;
 import com.flipkart.qa.util.ExcelReader;
 import com.flipkart.qa.util.ExplicitWait;
+import com.flipkart.qa.util.TestUtils;
 
 public class TestBase {
 
@@ -48,7 +50,7 @@ public class TestBase {
 		FileInputStream fip;
 		try {
 			fip = new FileInputStream(
-					System.getProperty("user.dir") + "\\src\\main\\java\\com\\flipkart\\qa\\config\\config.properties");
+					System.getProperty("user.dir") + "\\src\\main\\resources\\configfile\\config.properties");
 			prop.load(fip);
 		} catch (Exception e) {
 			e.getMessage();
@@ -95,7 +97,7 @@ public class TestBase {
 	@AfterTest
 	public void afterTest() {
 		if (driver != null) {
-			driver.quit();
+			//	driver.quit();
 		}
 	}
 
@@ -159,5 +161,10 @@ public class TestBase {
 		ExcelReader excel = new ExcelReader();
 		Object[][] data = excel.getExcelData(excelLocation, sheetName);
 		return data;
+	}
+
+	@AfterSuite
+	public void afterSuite() throws Exception {
+	//	TestUtils.sendEmailWithResults();
 	}
 }

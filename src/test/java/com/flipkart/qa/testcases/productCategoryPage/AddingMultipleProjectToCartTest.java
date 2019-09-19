@@ -21,7 +21,7 @@ public class AddingMultipleProjectToCartTest extends TestBase {
 	String productName = "Redmi Note 7 Pro (Space Black, 64 GB)";
 	String mainMenuText1 = "Men";
 	String subMainMenuText1 = "Sports Shoes";
-	String productName1 = "WNDR-13 Running Shoes For Men";
+	String productName1 = "Oxygen Running Shoes For Men";
 
 	@BeforeClass
 	public void setup() {
